@@ -3,10 +3,12 @@
 namespace Fabstract\Component\REST;
 
 use Fabs\Component\DependencyInjection\ServiceDefinition;
+use Fabs\Component\Http\Constant\Services;
 use Fabs\Component\Http\Definition\ExceptionHandlerDefinition;
 use Fabs\Component\Http\Definition\ServiceDefinition\SerializerDefinition;
 use Fabs\Component\Http\Exception\StatusCodeException;
 use Fabs\Component\Http\ExceptionHandler\LoggingGeneralExceptionHandler;
+use Fabs\Component\Http\ExceptionLoggerService;
 use Fabs\Component\Http\HttpApplicationBase;
 use Fabstract\Component\REST\Exception\ResponseValidationException;
 use Fabstract\Component\REST\ExceptionHandler\ResponseValidationExceptionHandler;
@@ -18,7 +20,7 @@ use Fabstract\Component\REST\Middleware\SerializationMiddleware;
 
 abstract class RestApplication extends HttpApplicationBase implements Injectable
 {
-    protected function onConstruct()
+    protected function onConstruct($app_config = null)
     {
         $this
             ->addExceptionHandlerDefinition(
@@ -53,7 +55,10 @@ abstract class RestApplication extends HttpApplicationBase implements Injectable
             ->add((new ServiceDefinition())
                 ->setShared(true)
                 ->setName('normalization_listener')
-                ->setClassName(NormalizationListener::class));
+                ->setClassName(NormalizationListener::class))
+            ->add((new ServiceDefinition(true))
+                ->setName(Services::EXCEPTION_LOGGER)
+                ->setClassName(ExceptionLoggerService::class));
 
         $this->normalizer->addListener($this->normalization_listener);
 
