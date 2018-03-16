@@ -3,11 +3,14 @@
 namespace Fabstract\Component\REST;
 
 use Fabs\Component\Event\ListenerInterface;
+use Fabs\Component\Http\Exception\StatusCodeException\InternalServerErrorException;
 use Fabs\Component\Http\Exception\StatusCodeException\UnprocessableEntityException;
 use Fabs\Component\Http\Injectable;
 use Fabs\Component\LINQ\LINQ;
 use Fabs\Component\Serializer\Event\NormalizationWillStartEvent;
 use Fabs\Component\Validator\ValidatableInterface;
+use Fabstract\Component\REST\Exception\ResponseValidationException;
+use Fabstract\Component\REST\Model\ResponseModel;
 use Fabstract\Component\REST\Model\ValidationErrorModel;
 
 class NormalizationListener extends Injectable implements ListenerInterface, \Fabstract\Component\REST\Injectable
@@ -16,7 +19,7 @@ class NormalizationListener extends Injectable implements ListenerInterface, \Fa
     /**
      * @param NormalizationWillStartEvent $event
      * @return void
-     * @throws UnprocessableEntityException
+     * @throws ResponseValidationException
      */
     public function onEvent($event)
     {
@@ -26,7 +29,7 @@ class NormalizationListener extends Injectable implements ListenerInterface, \Fa
         }
 
         $normalized = $event->getObjectToNormalize();
-        if ($normalized instanceof ValidatableInterface) {
+        if ($normalized instanceof ResponseModel) {
             $validation_error_list = $this->validator->validate($normalized);
             if (count($validation_error_list) > 0) {
                 $validation_error_model_list = LINQ::from($validation_error_list)
@@ -36,7 +39,7 @@ class NormalizationListener extends Injectable implements ListenerInterface, \Fa
                     })
                     ->toArray();
 
-                throw new UnprocessableEntityException($validation_error_model_list);
+                throw new ResponseValidationException($validation_error_model_list);
             }
         }
     }
