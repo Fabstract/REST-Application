@@ -8,6 +8,8 @@ use Fabs\Component\Http\Definition\ServiceDefinition\SerializerDefinition;
 use Fabs\Component\Http\Exception\StatusCodeException;
 use Fabs\Component\Http\ExceptionHandler\LoggingGeneralExceptionHandler;
 use Fabs\Component\Http\HttpApplicationBase;
+use Fabstract\Component\REST\Exception\ResponseValidationException;
+use Fabstract\Component\REST\ExceptionHandler\ResponseValidationExceptionHandler;
 use Fabstract\Component\REST\Middleware\JSONMiddleware;
 use Fabs\Component\Serializer\JSONSerializer;
 use Fabs\Component\Validator\Validator;
@@ -22,6 +24,9 @@ abstract class RestApplication extends HttpApplicationBase implements Injectable
             ->addExceptionHandlerDefinition(
                 (new ExceptionHandlerDefinition(StatusCodeException::class))
                     ->setClassName(RestfulExceptionHandler::class))
+            ->addExceptionHandlerDefinition(
+                (new ExceptionHandlerDefinition(ResponseValidationException::class))
+                    ->setClassName(ResponseValidationExceptionHandler::class))
             ->addExceptionHandlerDefinition(
                 (new ExceptionHandlerDefinition(\Exception::class))
                     ->setClassName(LoggingGeneralExceptionHandler::class));
@@ -43,10 +48,6 @@ abstract class RestApplication extends HttpApplicationBase implements Injectable
                 }))
             ->add((new ServiceDefinition())
                 ->setShared(true)
-                ->setName('denormalization_listener')
-                ->setClassName(DenormalizationListener::class))
-            ->add((new ServiceDefinition())
-                ->setShared(true)
                 ->setName('validator')
                 ->setClassName(Validator::class))
             ->add((new ServiceDefinition())
@@ -54,7 +55,6 @@ abstract class RestApplication extends HttpApplicationBase implements Injectable
                 ->setName('normalization_listener')
                 ->setClassName(NormalizationListener::class));
 
-        $this->normalizer->addListener($this->denormalization_listener);
         $this->normalizer->addListener($this->normalization_listener);
 
         $this
