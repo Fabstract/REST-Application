@@ -7,7 +7,6 @@ namespace Fabstract\Component\REST;
  * @package Fabstract\Component\REST
  *
  * @property \Fabs\Component\Serializer\JSONSerializer serializer
- * @property DenormalizationListener denormalization_listener
  * @property NormalizationListener normalization_listener
  *
  * @property \Fabs\Component\Validator\Validator validator
