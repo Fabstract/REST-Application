@@ -6,8 +6,8 @@ use Fabs\Component\DependencyInjection\ServiceDefinition;
 use Fabs\Component\Http\Definition\ExceptionHandlerDefinition;
 use Fabs\Component\Http\Definition\ServiceDefinition\SerializerDefinition;
 use Fabs\Component\Http\Exception\StatusCodeException;
+use Fabs\Component\Http\ExceptionHandler\LoggingGeneralExceptionHandler;
 use Fabs\Component\Http\HttpApplicationBase;
-use Fabstract\Component\REST\ExceptionHandler\GeneralExceptionHandler;
 use Fabstract\Component\REST\Middleware\JSONMiddleware;
 use Fabs\Component\Serializer\JSONSerializer;
 use Fabs\Component\Validator\Validator;
@@ -18,15 +18,13 @@ abstract class RestApplication extends HttpApplicationBase implements Injectable
 {
     protected function onConstruct()
     {
-        parent::onConstruct();
-
         $this
             ->addExceptionHandlerDefinition(
                 (new ExceptionHandlerDefinition(StatusCodeException::class))
                     ->setClassName(RestfulExceptionHandler::class))
             ->addExceptionHandlerDefinition(
                 (new ExceptionHandlerDefinition(\Exception::class))
-                    ->setClassName(GeneralExceptionHandler::class));
+                    ->setClassName(LoggingGeneralExceptionHandler::class));
 
         $this->getContainer()
             ->add((new SerializerDefinition(true))
