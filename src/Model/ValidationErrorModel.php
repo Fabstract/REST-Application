@@ -12,6 +12,10 @@ class ValidationErrorModel implements NormalizableInterface
     /**
      * @var string
      */
+    public $class_name = null;
+    /**
+     * @var string
+     */
     public $property_name = null;
     /**
      * @var mixed
@@ -44,6 +48,7 @@ class ValidationErrorModel implements NormalizableInterface
         Assert::isType($validation_error, ValidationError::class, 'validation_error');
 
         $error_model = new ValidationErrorModel();
+        $error_model->class_name = $validation_error->getClassName();
         $error_model->property_name = $validation_error->getPropertyName();
         $error_model->property_value = $validation_error->getPropertyValue();
         $error_model->message = $validation_error->getMessage();
