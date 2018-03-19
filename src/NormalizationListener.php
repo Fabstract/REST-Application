@@ -3,12 +3,9 @@
 namespace Fabstract\Component\REST;
 
 use Fabs\Component\Event\ListenerInterface;
-use Fabs\Component\Http\Exception\StatusCodeException\InternalServerErrorException;
-use Fabs\Component\Http\Exception\StatusCodeException\UnprocessableEntityException;
 use Fabs\Component\Http\Injectable;
 use Fabs\Component\LINQ\LINQ;
 use Fabs\Component\Serializer\Event\NormalizationWillStartEvent;
-use Fabs\Component\Validator\ValidatableInterface;
 use Fabstract\Component\REST\Exception\ResponseValidationException;
 use Fabstract\Component\REST\Model\ResponseModel;
 use Fabstract\Component\REST\Model\ValidationErrorModel;
