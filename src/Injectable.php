@@ -1,18 +1,18 @@
 <?php
 
 namespace Fabstract\Component\REST;
-use Fabs\Component\Http\ExceptionLoggerService;
+use Fabstract\Component\Http\ExceptionLoggerService;
 
 /**
  * Class Injectable
  * @package Fabstract\Component\REST
  *
- * @property \Fabs\Component\Serializer\JSONSerializer serializer
+ * @property \Fabstract\Component\Serializer\JSONSerializer serializer
  * @property NormalizationListener normalization_listener
  *
- * @property \Fabs\Component\Validator\Validator validator
- * @property \Fabs\Component\Serializer\Encoder\JSONEncoder encoder
- * @property \Fabs\Component\Serializer\Normalizer\Normalizer normalizer
+ * @property \Fabstract\Component\Validator\Validator validator
+ * @property \Fabstract\Component\Serializer\Encoder\JSONEncoder encoder
+ * @property \Fabstract\Component\Serializer\Normalizer\Normalizer normalizer
  * @property ExceptionLoggerService exception_logger
  */
 interface Injectable

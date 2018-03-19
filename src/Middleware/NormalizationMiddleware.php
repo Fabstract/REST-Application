@@ -2,8 +2,8 @@
 
 namespace Fabstract\Component\REST\Middleware;
 
-use Fabs\Component\Http\MiddlewareBase;
-use Fabs\Component\Serializer\Normalizer\Type;
+use Fabstract\Component\Http\MiddlewareBase;
+use Fabstract\Component\Serializer\Normalizer\Type;
 use Fabstract\Component\REST\Assert;
 
 class NormalizationMiddleware extends MiddlewareBase

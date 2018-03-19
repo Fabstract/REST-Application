@@ -2,9 +2,9 @@
 
 namespace Fabstract\Component\REST\Middleware;
 
-use Fabs\Component\Http\Exception\StatusCodeException\UnprocessableEntityException;
-use Fabs\Component\Http\MiddlewareBase;
-use Fabs\Component\LINQ\LINQ;
+use Fabstract\Component\Http\Exception\StatusCodeException\UnprocessableEntityException;
+use Fabstract\Component\Http\MiddlewareBase;
+use Fabstract\Component\LINQ\LINQ;
 use Fabstract\Component\REST\Injectable;
 use Fabstract\Component\REST\Model\ValidationErrorModel;
 
@@ -17,7 +17,7 @@ class ValidationMiddleware extends MiddlewareBase implements Injectable
         if (count($validation_error_list) > 0) {
             $validation_error_model_list = LINQ::from($validation_error_list)
                 ->select(function ($validation_error) {
-                    /** @var \Fabs\Component\Validator\ValidationError $validation_error */
+                    /** @var \Fabstract\Component\Validator\ValidationError $validation_error */
                     return ValidationErrorModel::create($validation_error);
                 })
                 ->toArray();

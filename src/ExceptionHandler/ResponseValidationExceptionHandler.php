@@ -2,8 +2,8 @@
 
 namespace Fabstract\Component\REST\ExceptionHandler;
 
-use Fabs\Component\Http\Exception\StatusCodeException\InternalServerErrorException;
-use Fabs\Component\Http\ExceptionHandlerBase;
+use Fabstract\Component\Http\Exception\StatusCodeException\InternalServerErrorException;
+use Fabstract\Component\Http\ExceptionHandlerBase;
 use Fabstract\Component\DateTimeHandler\DateTimeHandler;
 use Fabstract\Component\REST\Assert;
 use Fabstract\Component\REST\Exception\ResponseValidationException;

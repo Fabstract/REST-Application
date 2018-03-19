@@ -2,9 +2,9 @@
 
 namespace Fabstract\Component\REST\Model;
 
-use Fabs\Component\Serializer\Normalizer\NormalizableInterface;
-use Fabs\Component\Serializer\Normalizer\NormalizationMetadata;
-use Fabs\Component\Validator\ValidationError;
+use Fabstract\Component\Serializer\Normalizer\NormalizableInterface;
+use Fabstract\Component\Serializer\Normalizer\NormalizationMetadata;
+use Fabstract\Component\Validator\ValidationError;
 use Fabstract\Component\REST\Assert;
 
 class ValidationErrorModel implements NormalizableInterface

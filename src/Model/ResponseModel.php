@@ -2,11 +2,11 @@
 
 namespace Fabstract\Component\REST\Model;
 
-use Fabs\Component\Serializer\Normalizer\NormalizableInterface;
-use Fabs\Component\Serializer\Normalizer\NormalizationMetadata;
-use Fabs\Component\Validator\ValidatableInterface;
-use Fabs\Component\Validator\Validation\StringValidation;
-use Fabs\Component\Validator\ValidationMetadata;
+use Fabstract\Component\Serializer\Normalizer\NormalizableInterface;
+use Fabstract\Component\Serializer\Normalizer\NormalizationMetadata;
+use Fabstract\Component\Validator\ValidatableInterface;
+use Fabstract\Component\Validator\Validation\StringValidation;
+use Fabstract\Component\Validator\ValidationMetadata;
 
 class ResponseModel implements NormalizableInterface, ValidatableInterface
 {

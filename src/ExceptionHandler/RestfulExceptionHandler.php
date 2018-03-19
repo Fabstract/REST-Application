@@ -2,8 +2,8 @@
 
 namespace Fabstract\Component\REST\ExceptionHandler;
 
-use Fabs\Component\Http\Exception\StatusCodeException;
-use Fabs\Component\Http\ExceptionHandlerBase;
+use Fabstract\Component\Http\Exception\StatusCodeException;
+use Fabstract\Component\Http\ExceptionHandlerBase;
 use Fabstract\Component\REST\Assert;
 use Fabstract\Component\REST\Constant\HttpHeaders;
 use Fabstract\Component\REST\Constant\ResponseStatus;

@@ -2,19 +2,19 @@
 
 namespace Fabstract\Component\REST;
 
-use Fabs\Component\DependencyInjection\ServiceDefinition;
-use Fabs\Component\Http\Constant\Services;
-use Fabs\Component\Http\Definition\ExceptionHandlerDefinition;
-use Fabs\Component\Http\Definition\ServiceDefinition\SerializerDefinition;
-use Fabs\Component\Http\Exception\StatusCodeException;
-use Fabs\Component\Http\ExceptionHandler\LoggingGeneralExceptionHandler;
-use Fabs\Component\Http\ExceptionLoggerService;
-use Fabs\Component\Http\HttpApplicationBase;
+use Fabstract\Component\DependencyInjection\ServiceDefinition;
+use Fabstract\Component\Http\Constant\Services;
+use Fabstract\Component\Http\Definition\ExceptionHandlerDefinition;
+use Fabstract\Component\Http\Definition\ServiceDefinition\SerializerDefinition;
+use Fabstract\Component\Http\Exception\StatusCodeException;
+use Fabstract\Component\Http\ExceptionHandler\LoggingGeneralExceptionHandler;
+use Fabstract\Component\Http\ExceptionLoggerService;
+use Fabstract\Component\Http\HttpApplicationBase;
 use Fabstract\Component\REST\Exception\ResponseValidationException;
 use Fabstract\Component\REST\ExceptionHandler\ResponseValidationExceptionHandler;
 use Fabstract\Component\REST\Middleware\JSONMiddleware;
-use Fabs\Component\Serializer\JSONSerializer;
-use Fabs\Component\Validator\Validator;
+use Fabstract\Component\Serializer\JSONSerializer;
+use Fabstract\Component\Validator\Validator;
 use Fabstract\Component\REST\ExceptionHandler\RestfulExceptionHandler;
 use Fabstract\Component\REST\Middleware\SerializationMiddleware;
 

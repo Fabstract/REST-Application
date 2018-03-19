@@ -2,10 +2,10 @@
 
 namespace Fabstract\Component\REST\Middleware;
 
-use Fabs\Component\Http\Constant\HttpMethods;
-use Fabs\Component\Http\Exception\StatusCodeException\BadRequestException;
-use Fabs\Component\Http\MiddlewareBase;
-use Fabs\Component\Serializer\Exception\ParseException;
+use Fabstract\Component\Http\Constant\HttpMethods;
+use Fabstract\Component\Http\Exception\StatusCodeException\BadRequestException;
+use Fabstract\Component\Http\MiddlewareBase;
+use Fabstract\Component\Serializer\Exception\ParseException;
 
 class SerializationMiddleware extends MiddlewareBase
 {

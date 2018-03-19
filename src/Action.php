@@ -2,12 +2,12 @@
 
 namespace Fabstract\Component\REST;
 
-use Fabs\Component\Serializer\Normalizer\ArrayType;
-use Fabs\Component\Serializer\Normalizer\Type;
+use Fabstract\Component\Serializer\Normalizer\ArrayType;
+use Fabstract\Component\Serializer\Normalizer\Type;
 use Fabstract\Component\REST\Middleware\NormalizationMiddleware;
 use Fabstract\Component\REST\Middleware\ValidationMiddleware;
 
-class Action extends \Fabs\Component\Http\Action
+class Action extends \Fabstract\Component\Http\Action
 {
     /**
      * @param RequestBodyModelBase $request_body_model

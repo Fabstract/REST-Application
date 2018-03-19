@@ -2,10 +2,10 @@
 
 namespace Fabstract\Component\REST\Middleware;
 
-use Fabs\Component\Http\Exception\StatusCodeException\UnsupportedMediaTypeException;
-use Fabs\Component\Http\MiddlewareBase;
+use Fabstract\Component\Http\Exception\StatusCodeException\UnsupportedMediaTypeException;
+use Fabstract\Component\Http\MiddlewareBase;
 use Fabstract\Component\REST\Constant\ResponseStatus;
-use Fabs\Component\Serializer\JSONSerializer;
+use Fabstract\Component\Serializer\JSONSerializer;
 use Fabstract\Component\REST\Assert;
 use Fabstract\Component\REST\Constant\HttpHeaders;
 use Fabstract\Component\REST\Model\ResponseModel;

@@ -4,7 +4,7 @@ namespace Fabstract\Component\REST;
 
 use Fabstract\Component\REST\Exception\AssertionException;
 
-class Assert extends \Fabs\Component\Assert\Assert
+class Assert extends \Fabstract\Component\Assert\Assert
 {
     protected static function generateException($name, $expected, $given)
     {

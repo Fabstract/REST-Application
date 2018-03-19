@@ -2,10 +2,10 @@
 
 namespace Fabstract\Component\REST;
 
-use Fabs\Component\Event\ListenerInterface;
-use Fabs\Component\Http\Injectable;
-use Fabs\Component\LINQ\LINQ;
-use Fabs\Component\Serializer\Event\NormalizationWillStartEvent;
+use Fabstract\Component\Event\ListenerInterface;
+use Fabstract\Component\Http\Injectable;
+use Fabstract\Component\LINQ\LINQ;
+use Fabstract\Component\Serializer\Event\NormalizationWillStartEvent;
 use Fabstract\Component\REST\Exception\ResponseValidationException;
 use Fabstract\Component\REST\Model\ResponseModel;
 use Fabstract\Component\REST\Model\ValidationErrorModel;
@@ -31,7 +31,7 @@ class NormalizationListener extends Injectable implements ListenerInterface, \Fa
             if (count($validation_error_list) > 0) {
                 $validation_error_model_list = LINQ::from($validation_error_list)
                     ->select(function ($validation_error) {
-                        /** @var \Fabs\Component\Validator\ValidationError $validation_error */
+                        /** @var \Fabstract\Component\Validator\ValidationError $validation_error */
                         return ValidationErrorModel::create($validation_error);
                     })
                     ->toArray();

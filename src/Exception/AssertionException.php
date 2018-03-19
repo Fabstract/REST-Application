@@ -2,7 +2,7 @@
 
 namespace Fabstract\Component\REST\Exception;
 
-use Fabs\Component\Assert\AssertionExceptionInterface;
+use Fabstract\Component\Assert\AssertionExceptionInterface;
 
 class AssertionException extends Exception implements AssertionExceptionInterface
 {
