@@ -21,7 +21,7 @@ class ResponseModel implements NormalizableInterface, ValidatableInterface
      */
     public function configureNormalizationMetadata($normalization_metadata)
     {
-        // todo render if not null condition for data field
+        $normalization_metadata->setRenderIfNotNull('data');
     }
 
     /**
