@@ -13,6 +13,6 @@ class ErrorResponseModel extends ResponseModel
     {
         parent::configureNormalizationMetadata($normalization_metadata);
 
-        // todo render if not null for error_msg and details
+        $normalization_metadata->setRenderIfNotNull('error_details');
     }
 }
