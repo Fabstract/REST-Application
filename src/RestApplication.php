@@ -30,7 +30,7 @@ abstract class RestApplication extends HttpApplicationBase implements Injectable
                 (new ExceptionHandlerDefinition(ResponseValidationException::class))
                     ->setClassName(ResponseValidationExceptionHandler::class))
             ->addExceptionHandlerDefinition(
-                (new ExceptionHandlerDefinition(\Exception::class))
+                (new ExceptionHandlerDefinition(\Throwable::class))
                     ->setClassName(LoggingGeneralExceptionHandler::class));
 
         $this->getContainer()
