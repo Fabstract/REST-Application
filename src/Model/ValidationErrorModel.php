@@ -4,7 +4,6 @@ namespace Fabstract\Component\REST\Model;
 
 use Fabs\Component\Serializer\Normalizer\NormalizableInterface;
 use Fabs\Component\Serializer\Normalizer\NormalizationMetadata;
-use Fabs\Component\Serializer\Normalizer\Type;
 use Fabs\Component\Validator\ValidationError;
 use Fabstract\Component\REST\Assert;
 
