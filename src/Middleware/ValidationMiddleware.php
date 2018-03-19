@@ -25,9 +25,4 @@ class ValidationMiddleware extends MiddlewareBase implements Injectable
             throw new UnprocessableEntityException($validation_error_model_list);
         }
     }
-
-    public function after()
-    {
-        parent::after(); // TODO:
-    }
 }
