@@ -2,6 +2,7 @@
 
 namespace Fabstract\Component\REST\Middleware;
 
+use Fabs\Component\Http\Constant\HttpMethods;
 use Fabs\Component\Http\Exception\StatusCodeException\BadRequestException;
 use Fabs\Component\Http\MiddlewareBase;
 use Fabs\Component\Serializer\Exception\ParseException;
@@ -11,7 +12,9 @@ class SerializationMiddleware extends MiddlewareBase
 
     public function before()
     {
-        if (isset($this->serializer)) {
+        if ($this->requestCannotContainBody() === false &&
+            isset($this->serializer)
+        ) {
             try {
                 $decoded = $this->serializer->getEncoder()->decode($this->request->getContent());
                 $this->request->setBody($decoded);
@@ -19,6 +22,13 @@ class SerializationMiddleware extends MiddlewareBase
                 throw new BadRequestException();
             }
         }
+    }
+
+    private function requestCannotContainBody()
+    {
+        return $this->request->getMethod() === HttpMethods::GET ||
+            $this->request->getMethod() === HttpMethods::HEAD ||
+            $this->request->getMethod() === HttpMethods::OPTIONS;
     }
 
     public function after()
