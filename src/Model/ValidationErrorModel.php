@@ -4,6 +4,7 @@ namespace Fabstract\Component\REST\Model;
 
 use Fabs\Component\Serializer\Normalizer\NormalizableInterface;
 use Fabs\Component\Serializer\Normalizer\NormalizationMetadata;
+use Fabs\Component\Serializer\Normalizer\Type;
 use Fabs\Component\Validator\ValidationError;
 use Fabstract\Component\REST\Assert;
 
@@ -36,7 +37,7 @@ class ValidationErrorModel implements NormalizableInterface
      */
     public function configureNormalizationMetadata($normalization_metadata)
     {
-
+        $normalization_metadata->setAsTransient('class_name');
     }
 
     /**
