@@ -10,7 +10,7 @@ use Fabstract\Component\REST\Exception\ResponseValidationException;
 use Fabstract\Component\REST\Model\ResponseModel;
 use Fabstract\Component\REST\Model\ValidationErrorModel;
 
-class NormalizationListener extends Injectable implements ListenerInterface, \Fabstract\Component\REST\Injectable
+class NormalizationListener extends Injectable implements ListenerInterface, ServiceAware
 {
 
     /**

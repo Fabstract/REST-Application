@@ -18,7 +18,7 @@ use Fabstract\Component\Validator\Validator;
 use Fabstract\Component\REST\ExceptionHandler\RestfulExceptionHandler;
 use Fabstract\Component\REST\Middleware\SerializationMiddleware;
 
-abstract class RestApplication extends HttpApplicationBase implements Injectable
+abstract class RestApplication extends HttpApplicationBase implements ServiceAware
 {
     protected function onConstruct($app_config = null)
     {

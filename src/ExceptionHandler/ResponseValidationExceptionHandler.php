@@ -7,10 +7,10 @@ use Fabstract\Component\Http\ExceptionHandlerBase;
 use Fabstract\Component\DateTimeHandler\DateTimeHandler;
 use Fabstract\Component\REST\Assert;
 use Fabstract\Component\REST\Exception\ResponseValidationException;
-use Fabstract\Component\REST\Injectable;
+use Fabstract\Component\REST\ServiceAware;
 use Fabstract\Component\REST\Model\ValidationErrorModel;
 
-class ResponseValidationExceptionHandler extends ExceptionHandlerBase implements Injectable
+class ResponseValidationExceptionHandler extends ExceptionHandlerBase implements ServiceAware
 {
 
     /**

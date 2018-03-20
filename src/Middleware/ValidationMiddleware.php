@@ -5,10 +5,10 @@ namespace Fabstract\Component\REST\Middleware;
 use Fabstract\Component\Http\Exception\StatusCodeException\UnprocessableEntityException;
 use Fabstract\Component\Http\MiddlewareBase;
 use Fabstract\Component\LINQ\LINQ;
-use Fabstract\Component\REST\Injectable;
+use Fabstract\Component\REST\ServiceAware;
 use Fabstract\Component\REST\Model\ValidationErrorModel;
 
-class ValidationMiddleware extends MiddlewareBase implements Injectable
+class ValidationMiddleware extends MiddlewareBase implements ServiceAware
 {
     public function before()
     {
