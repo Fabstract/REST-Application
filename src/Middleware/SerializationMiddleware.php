@@ -35,7 +35,7 @@ class SerializationMiddleware extends MiddlewareBase
     {
         if (isset($this->serializer)) {
             $serialized = $this->serializer->serialize($this->response->getReturnedValue());
-            $this->response->setContent($serialized);
+            $this->response->setReturnedValue($serialized);
         }
     }
 }
