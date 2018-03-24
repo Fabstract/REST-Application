@@ -51,10 +51,11 @@ final class QueryModel
     }
 
     /**
+     * @param QueryConfig $query_config
      * @return QueryModelBuilder
      */
-    public static function builder()
+    public static function builder($query_config = null)
     {
-        return QueryModelBuilder::create();
+        return QueryModelBuilder::create($query_config);
     }
 }
