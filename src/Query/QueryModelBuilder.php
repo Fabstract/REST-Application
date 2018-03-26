@@ -2,7 +2,6 @@
 
 namespace Fabstract\Component\REST\Query;
 
-// todo page and per_page
 use Fabstract\Component\Http\Request;
 use Fabstract\Component\LINQ\LINQ;
 use Fabstract\Component\REST\Assert;
@@ -14,6 +13,7 @@ class QueryModelBuilder
     private $query_element_model_list = [];
     /** @var SortQueryElementModel[] */
     private $sort_query_element_model_list = [];
+
     /** @var QueryConfig */
     private $query_config = null;
 
@@ -163,7 +163,9 @@ class QueryModelBuilder
     {
         $query_element_list = $this->getQueryElementList($bag);
         $sort_query_element_list = $this->getSortQueryElementList($bag);
-        return new QueryModel($query_element_list, $sort_query_element_list);
+        $page = $this->getPage($bag);
+        $per_page = $this->getPerPage($bag);
+        return new QueryModel($query_element_list, $sort_query_element_list, $page, $per_page);
     }
 
     /**
@@ -243,5 +245,25 @@ class QueryModelBuilder
                 return false;
             })
             ->toArray();
+    }
+
+    /**
+     * @param ParameterBagInterface $bag
+     * @return int
+     */
+    private function getPage($bag)
+    {
+        $query_page_key = $this->query_config->getQueryKeyPage();
+        return $bag->getInt($query_page_key, 0);
+    }
+
+    /**
+     * @param ParameterBagInterface $bag
+     * @return int
+     */
+    private function getPerPage($bag)
+    {
+        $query_per_page_key = $this->query_config->getQueryKeyPerPage();
+        return $bag->getInt($query_per_page_key, 1);
     }
 }
