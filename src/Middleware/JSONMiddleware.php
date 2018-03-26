@@ -2,6 +2,7 @@
 
 namespace Fabstract\Component\REST\Middleware;
 
+use Fabstract\Component\Http\Constant\HttpMethods;
 use Fabstract\Component\Http\Exception\StatusCodeException\UnsupportedMediaTypeException;
 use Fabstract\Component\Http\MiddlewareBase;
 use Fabstract\Component\REST\Constant\ResponseStatus;
@@ -16,15 +17,17 @@ class JSONMiddleware extends MiddlewareBase
     {
         Assert::isType($this->serializer, JSONSerializer::class, 'serializer');
 
-        $content_type = $this->request->headers->get(HttpHeaders::CONTENT_TYPE);
-        $expected = 'application/json';
-        if ($content_type !== $expected) {
-            throw new UnsupportedMediaTypeException(
-                [
-                    HttpHeaders::CONTENT_TYPE => $content_type,
-                    'expected' => $expected
-                ]
-            );
+        if ($this->request->isMethod(HttpMethods::OPTIONS) !== true) {
+            $content_type = $this->request->headers->get(HttpHeaders::CONTENT_TYPE);
+            $expected = 'application/json';
+            if ($content_type !== $expected) {
+                throw new UnsupportedMediaTypeException(
+                    [
+                        HttpHeaders::CONTENT_TYPE => $content_type,
+                        'expected' => $expected
+                    ]
+                );
+            }
         }
     }
 
