@@ -11,7 +11,15 @@ class QueryConfig
     const DEFAULT_QUERY_KEY_SORT_BY_DESCENDING = 'sort_by_descending';
     const DEFAULT_QUERY_KEY_PAGE = 'page';
     const DEFAULT_QUERY_KEY_PER_PAGE = 'per_page';
-    const DEFAULT_QUERY_ALLOWED_SORT_KEY_TYPE_LIST = QuerySortKeyTypes::ALL;
+    const DEFAULT_QUERY_ALLOWED_SORT_KEY_TYPE_LIST =
+        [
+            QuerySortKeyTypes::STRING,
+            QuerySortKeyTypes::DOUBLE,
+            QuerySortKeyTypes::FLOAT,
+            QuerySortKeyTypes::LONG,
+            QuerySortKeyTypes::DATE,
+            QuerySortKeyTypes::INT
+        ];
 
     /** @var string */
     private $query_key_sort_by = QueryConfig::DEFAULT_QUERY_KEY_SORT_BY;
