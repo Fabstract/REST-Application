@@ -11,13 +11,19 @@ class QuerySortKeyTypes
     const DATE = 'date';
     const INT = 'int';
 
-    const ALL =
-        [
-            QuerySortKeyTypes::STRING,
-            QuerySortKeyTypes::DOUBLE,
-            QuerySortKeyTypes::FLOAT,
-            QuerySortKeyTypes::LONG,
-            QuerySortKeyTypes::DATE,
-            QuerySortKeyTypes::INT
-        ];
+    /**
+     * @return string[]
+     */
+    public function all()
+    {
+        return
+            [
+                QuerySortKeyTypes::STRING,
+                QuerySortKeyTypes::DOUBLE,
+                QuerySortKeyTypes::FLOAT,
+                QuerySortKeyTypes::LONG,
+                QuerySortKeyTypes::DATE,
+                QuerySortKeyTypes::INT
+            ];
+    }
 }
