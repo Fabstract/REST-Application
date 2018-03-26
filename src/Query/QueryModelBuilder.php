@@ -43,13 +43,16 @@ class QueryModelBuilder
 
     /**
      * @param string $query_element
+     * @param bool $is_exact
      * @return QueryModelBuilder
      */
-    public function addQueryElement($query_element)
+    public function addQueryElement($query_element, $is_exact = false)
     {
         Assert::isNotEmptyString($query_element, 'query_element');
 
-        $this->query_element_model_list[] = QueryElementModel::create($query_element);
+        $query_element_model = QueryElementModel::create($query_element);
+        $query_element_model->setIsExact($is_exact);
+        $this->query_element_model_list[] = $query_element_model;
         return $this;
     }
 
