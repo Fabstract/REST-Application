@@ -67,6 +67,8 @@ class SortQueryElementModel extends QueryElementModel
      */
     public function setIsDefault($is_default)
     {
+        Assert::isBoolean($is_default, 'is_default');
+
         $this->is_default = $is_default;
         return $this;
     }
