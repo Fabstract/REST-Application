@@ -4,7 +4,7 @@ namespace Fabstract\Component\REST\Query;
 
 use Fabstract\Component\REST\Assert;
 
-final class QueryModel
+class QueryModel
 {
     /** @var QueryElementModel[] */
     private $query_element_list = [];
