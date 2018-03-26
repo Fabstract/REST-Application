@@ -86,16 +86,20 @@ class QueryModelBuilder
     /**
      * @param string $sort_query_element
      * @param string $type
+     * @param bool $descending
      * @param bool $default
      * @return QueryModelBuilder
      */
-    public function addSortQueryElement($sort_query_element, $type = 'string', $default = false)
+    public function addSortQueryElement($sort_query_element, $type = 'string', $descending = false, $default = false)
     {
         Assert::isNotEmptyString($sort_query_element, 'sort_query_element');
         Assert::isInStringArray($type, $this->query_config->getQueryAllowedSortKeyTypeList(), 'type');
+        Assert::isBoolean($descending, 'descending');
+        Assert::isBoolean($default, 'default');
 
         $sort_query_element_model = SortQueryElementModel::create($sort_query_element)
             ->setType($type)
+            ->setDescending($descending)
             ->setIsDefault($default);
         $this->sort_query_element_model_list[] = $sort_query_element_model;
 
