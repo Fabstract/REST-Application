@@ -10,19 +10,27 @@ class QueryModel
     private $query_element_list = [];
     /** @var SortQueryElementModel[] */
     private $sort_query_element_list = [];
+    /** @var int */
+    private $page = 0;
+    /** @var int */
+    private $per_page = 0;
 
     /**
      * QueryModel constructor.
      * @param QueryElementModel[] $query_element_list
      * @param SortQueryElementModel[] $sort_query_element_list
+     * @param int $page
+     * @param int $per_page
      */
-    public function __construct($query_element_list = [], $sort_query_element_list = [])
+    public function __construct($query_element_list = [], $sort_query_element_list = [], $page, $per_page)
     {
         Assert::isArrayOfType($query_element_list, QueryElementModel::class, 'query_element_list');
         Assert::isArrayOfType($sort_query_element_list, SortQueryElementModel::class, 'sort_query_element_list');
 
         $this->query_element_list = $query_element_list;
         $this->sort_query_element_list = $sort_query_element_list;
+        $this->page = $page;
+        $this->per_page = $per_page;
     }
 
     /**
@@ -39,6 +47,22 @@ class QueryModel
     public function getSortQueryElement()
     {
         return $this->sort_query_element_list;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPage()
+    {
+        return $this->page;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPerPage()
+    {
+        return $this->per_page;
     }
 
     /**
