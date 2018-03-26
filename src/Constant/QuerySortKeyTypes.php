@@ -14,7 +14,7 @@ class QuerySortKeyTypes
     /**
      * @return string[]
      */
-    public function all()
+    public static function all()
     {
         return
             [
