@@ -3,13 +3,13 @@
 namespace Fabstract\Component\REST;
 
 use Fabstract\Component\DependencyInjection\ServiceDefinition;
-use Fabstract\Component\Http\Constant\Services;
 use Fabstract\Component\Http\Definition\ExceptionHandlerDefinition;
 use Fabstract\Component\Http\Definition\ServiceDefinition\SerializerDefinition;
 use Fabstract\Component\Http\Exception\StatusCodeException;
 use Fabstract\Component\Http\ExceptionHandler\LoggingGeneralExceptionHandler;
 use Fabstract\Component\Http\ExceptionLoggerService;
 use Fabstract\Component\Http\HttpApplicationBase;
+use Fabstract\Component\REST\Constant\Services;
 use Fabstract\Component\REST\Exception\ResponseValidationException;
 use Fabstract\Component\REST\ExceptionHandler\ResponseValidationExceptionHandler;
 use Fabstract\Component\REST\Middleware\JSONMiddleware;
