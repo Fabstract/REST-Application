@@ -8,7 +8,7 @@ use Fabstract\Component\LINQ\LINQ;
 use Fabstract\Component\REST\Assert;
 use Symfony\Component\HttpFoundation\ParameterBagInterface;
 
-final class QueryModelBuilder
+class QueryModelBuilder
 {
     /** @var QueryElementModel[] */
     private $query_element_model_list = [];
