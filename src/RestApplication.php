@@ -64,8 +64,8 @@ abstract class RestApplication extends HttpApplicationBase implements ServiceAwa
         $this->normalizer->addListener($this->normalization_listener);
 
         $this
-            ->addMiddleware(QueryMiddleware::class)
             ->addMiddleware(SerializationMiddleware::class)
-            ->addMiddleware(JSONMiddleware::class);
+            ->addMiddleware(JSONMiddleware::class)
+            ->addMiddleware(QueryMiddleware::class);
     }
 }
