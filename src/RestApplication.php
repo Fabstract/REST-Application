@@ -13,6 +13,7 @@ use Fabstract\Component\REST\Constant\Services;
 use Fabstract\Component\REST\Exception\ResponseValidationException;
 use Fabstract\Component\REST\ExceptionHandler\ResponseValidationExceptionHandler;
 use Fabstract\Component\REST\Middleware\JSONMiddleware;
+use Fabstract\Component\REST\Middleware\QueryMiddleware;
 use Fabstract\Component\Serializer\JSONSerializer;
 use Fabstract\Component\Validator\Validator;
 use Fabstract\Component\REST\ExceptionHandler\RestfulExceptionHandler;
@@ -63,6 +64,7 @@ abstract class RestApplication extends HttpApplicationBase implements ServiceAwa
         $this->normalizer->addListener($this->normalization_listener);
 
         $this
+            ->addMiddleware(QueryMiddleware::class)
             ->addMiddleware(SerializationMiddleware::class)
             ->addMiddleware(JSONMiddleware::class);
     }
