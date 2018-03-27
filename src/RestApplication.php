@@ -3,6 +3,7 @@
 namespace Fabstract\Component\REST;
 
 use Fabstract\Component\DependencyInjection\ServiceDefinition;
+use Fabstract\Component\Http\ApplicationConfig;
 use Fabstract\Component\Http\Definition\ExceptionHandlerDefinition;
 use Fabstract\Component\Http\Definition\ServiceDefinition\SerializerDefinition;
 use Fabstract\Component\Http\Exception\StatusCodeException;
@@ -21,6 +22,10 @@ use Fabstract\Component\REST\Middleware\SerializationMiddleware;
 
 abstract class RestApplication extends HttpApplicationBase implements ServiceAware
 {
+    /**
+     * @param ApplicationConfig|null $app_config
+     * @return void
+     */
     protected function onConstruct($app_config = null)
     {
         $this
