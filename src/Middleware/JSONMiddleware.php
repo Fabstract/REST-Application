@@ -17,7 +17,10 @@ class JSONMiddleware extends MiddlewareBase
     {
         Assert::isType($this->serializer, JSONSerializer::class, 'serializer');
 
-        if ($this->request->isMethod(HttpMethods::OPTIONS) !== true) {
+        if ($this->request->isMethod(HttpMethods::POST) ||
+            $this->request->isMethod(HttpMethods::PUT) ||
+            $this->request->isMethod(HttpMethods::PATCH)
+        ) {
             $content_type = $this->request->headers->get(HttpHeaders::CONTENT_TYPE);
             $expected = 'application/json';
             if ($content_type !== $expected) {
