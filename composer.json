@@ -29,7 +29,7 @@
     "fabstract/di": "dev-master",
     "fabstract/lazy": "dev-master",
     "fabstract/validator": "dev-master",
-    "fabstract/datetimehandler": "dev-master",
+    "fabstract/datetime-handler": "dev-master",
     "fabstract/linq": "dev-master",
     "symfony/http-foundation": "3.4.6-BETA5"
   },
