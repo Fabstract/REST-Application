@@ -4,7 +4,7 @@ namespace Fabstract\Component\REST;
 
 use Fabstract\Component\Serializer\Normalizer\ArrayType;
 use Fabstract\Component\Serializer\Normalizer\Type;
-use Fabstract\Component\REST\Middleware\NormalizationMiddleware;
+use Fabstract\Component\REST\Middleware\DeserializationMiddleware;
 use Fabstract\Component\REST\Middleware\ValidationMiddleware;
 
 class Action extends \Fabstract\Component\Http\Action
@@ -43,7 +43,7 @@ class Action extends \Fabstract\Component\Http\Action
         }
 
         return $this
-            ->addMiddleware(NormalizationMiddleware::class, $type)
+            ->addMiddleware(DeserializationMiddleware::class, $type)
             ->addMiddleware(ValidationMiddleware::class);
     }
 }
