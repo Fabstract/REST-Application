@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c75ac71de0c4559c4a6b866522ac099",
+    "content-hash": "bfb6cc2e64f3a3e29b201a99dd18c2c8",
     "packages": [
         {
             "name": "fabstract/assert",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/Assert.git",
-                "reference": "960b3acc4018f472765e310f72386511e73bf387"
+                "reference": "97b2555926723590e7fa64af9230745178051cbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fabstract/Assert/zipball/960b3acc4018f472765e310f72386511e73bf387",
-                "reference": "960b3acc4018f472765e310f72386511e73bf387",
+                "url": "https://api.github.com/repos/Fabstract/Assert/zipball/97b2555926723590e7fa64af9230745178051cbe",
+                "reference": "97b2555926723590e7fa64af9230745178051cbe",
                 "shasum": ""
             },
             "require": {
@@ -29,6 +29,7 @@
                     "Fabstract\\Component\\Assert\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -44,15 +45,11 @@
                 "assert",
                 "php"
             ],
-            "support": {
-                "source": "https://github.com/Fabstract/Assert/tree/master",
-                "issues": "https://github.com/Fabstract/Assert/issues"
-            },
-            "time": "2018-03-26T07:51:23+00:00"
+            "time": "2018-03-29T07:05:18+00:00"
         },
         {
             "name": "fabstract/datetime-handler",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/DateTimeHandler.git",
@@ -73,6 +70,7 @@
                     "Fabstract\\Component\\DateTimeHandler\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -90,28 +88,24 @@
                 "php",
                 "time"
             ],
-            "support": {
-                "source": "https://github.com/Fabstract/DateTimeHandler/tree/master",
-                "issues": "https://github.com/Fabstract/DateTimeHandler/issues"
-            },
             "time": "2018-03-27T12:17:45+00:00"
         },
         {
             "name": "fabstract/di",
-            "version": "dev-master",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/Dependency-Injection.git",
-                "reference": "5d87b22dc341ec99162627782b45456161df339d"
+                "reference": "72a3b962b7b9cd4eb2362f29acf1290040697fb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fabstract/Dependency-Injection/zipball/5d87b22dc341ec99162627782b45456161df339d",
-                "reference": "5d87b22dc341ec99162627782b45456161df339d",
+                "url": "https://api.github.com/repos/Fabstract/Dependency-Injection/zipball/72a3b962b7b9cd4eb2362f29acf1290040697fb1",
+                "reference": "72a3b962b7b9cd4eb2362f29acf1290040697fb1",
                 "shasum": ""
             },
             "require": {
-                "fabstract/assert": "dev-master",
+                "fabstract/assert": "^0.1.0",
                 "php": "^7.0",
                 "psr/container": "^1.0"
             },
@@ -121,6 +115,7 @@
                     "Fabstract\\Component\\DependencyInjection\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -139,28 +134,24 @@
                 "injection",
                 "php"
             ],
-            "support": {
-                "source": "https://github.com/Fabstract/Dependency-Injection/tree/master",
-                "issues": "https://github.com/Fabstract/Dependency-Injection/issues"
-            },
-            "time": "2018-03-19T12:22:56+00:00"
+            "time": "2018-03-29T14:20:34+00:00"
         },
         {
             "name": "fabstract/event",
-            "version": "dev-master",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/Event.git",
-                "reference": "474ed610afc6e45206d4bc3a4ef55bce5ccc6a63"
+                "reference": "2ea31f1c68f177b1c3aa90cb0491826637f92976"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fabstract/Event/zipball/474ed610afc6e45206d4bc3a4ef55bce5ccc6a63",
-                "reference": "474ed610afc6e45206d4bc3a4ef55bce5ccc6a63",
+                "url": "https://api.github.com/repos/Fabstract/Event/zipball/2ea31f1c68f177b1c3aa90cb0491826637f92976",
+                "reference": "2ea31f1c68f177b1c3aa90cb0491826637f92976",
                 "shasum": ""
             },
             "require": {
-                "fabstract/assert": "dev-master",
+                "fabstract/assert": "^0.1.0",
                 "php": "^7.0"
             },
             "type": "library",
@@ -169,6 +160,7 @@
                     "Fabstract\\Component\\Event\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -184,35 +176,31 @@
                 "event",
                 "php"
             ],
-            "support": {
-                "source": "https://github.com/Fabstract/Event/tree/master",
-                "issues": "https://github.com/Fabstract/Event/issues"
-            },
-            "time": "2018-03-19T12:28:54+00:00"
+            "time": "2018-03-29T14:22:32+00:00"
         },
         {
             "name": "fabstract/http-application",
-            "version": "dev-master",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/HTTP-Application.git",
-                "reference": "dffd34f5b662b8485dc24ae9d421fda5d757ba4e"
+                "reference": "b5f5cb35e221b5435db383304f943e3745ad7600"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fabstract/HTTP-Application/zipball/dffd34f5b662b8485dc24ae9d421fda5d757ba4e",
-                "reference": "dffd34f5b662b8485dc24ae9d421fda5d757ba4e",
+                "url": "https://api.github.com/repos/Fabstract/HTTP-Application/zipball/b5f5cb35e221b5435db383304f943e3745ad7600",
+                "reference": "b5f5cb35e221b5435db383304f943e3745ad7600",
                 "shasum": ""
             },
             "require": {
-                "fabstract/assert": "dev-master",
-                "fabstract/datetime-handler": "dev-master",
-                "fabstract/di": "dev-master",
-                "fabstract/event": "dev-master",
-                "fabstract/lazy": "dev-master",
-                "fabstract/linq": "dev-master",
-                "fabstract/router": "dev-master",
-                "fabstract/serializer": "dev-master",
+                "fabstract/assert": "^0.1.0",
+                "fabstract/datetime-handler": "^0.1.0",
+                "fabstract/di": "^0.2.0",
+                "fabstract/event": "^0.2.0",
+                "fabstract/lazy": "^0.2.0",
+                "fabstract/linq": "^0.1.0",
+                "fabstract/router": "^0.3.0",
+                "fabstract/serializer": "^0.2.0",
                 "php": "^7.0",
                 "symfony/http-foundation": "3.4.6-BETA5"
             },
@@ -222,6 +210,7 @@
                     "Fabstract\\Component\\Http\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -239,28 +228,24 @@
                 "http application",
                 "php"
             ],
-            "support": {
-                "source": "https://github.com/Fabstract/HTTP-Application/tree/master",
-                "issues": "https://github.com/Fabstract/HTTP-Application/issues"
-            },
-            "time": "2018-03-27T12:18:59+00:00"
+            "time": "2018-03-29T15:18:52+00:00"
         },
         {
             "name": "fabstract/lazy",
-            "version": "dev-master",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/Lazy.git",
-                "reference": "3d173e5f372c6864456ef90b3c70c5f3f060153c"
+                "reference": "558b6d43777353899f74fa2aba866601031f6556"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fabstract/Lazy/zipball/3d173e5f372c6864456ef90b3c70c5f3f060153c",
-                "reference": "3d173e5f372c6864456ef90b3c70c5f3f060153c",
+                "url": "https://api.github.com/repos/Fabstract/Lazy/zipball/558b6d43777353899f74fa2aba866601031f6556",
+                "reference": "558b6d43777353899f74fa2aba866601031f6556",
                 "shasum": ""
             },
             "require": {
-                "fabstract/assert": "dev-master",
+                "fabstract/assert": "^0.1.0",
                 "php": "^7.0"
             },
             "type": "library",
@@ -269,6 +254,7 @@
                     "Fabstract\\Component\\Lazy\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -284,15 +270,11 @@
                 "lazy",
                 "php"
             ],
-            "support": {
-                "source": "https://github.com/Fabstract/Lazy/tree/master",
-                "issues": "https://github.com/Fabstract/Lazy/issues"
-            },
-            "time": "2018-03-19T12:19:22+00:00"
+            "time": "2018-03-29T14:24:19+00:00"
         },
         {
             "name": "fabstract/linq",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/LINQ.git",
@@ -310,6 +292,7 @@
                     "Fabstract\\Component\\LINQ\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -325,28 +308,24 @@
                 "linq",
                 "php"
             ],
-            "support": {
-                "source": "https://github.com/Fabstract/LINQ/tree/master",
-                "issues": "https://github.com/Fabstract/LINQ/issues"
-            },
             "time": "2018-03-19T12:14:04+00:00"
         },
         {
             "name": "fabstract/router",
-            "version": "dev-master",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/Router.git",
-                "reference": "9e3a1eb2b23eee7004e8d21a7250279ea87e634e"
+                "reference": "4e8b978a7e04f458cea22edb69c115cea9b5cdb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fabstract/Router/zipball/9e3a1eb2b23eee7004e8d21a7250279ea87e634e",
-                "reference": "9e3a1eb2b23eee7004e8d21a7250279ea87e634e",
+                "url": "https://api.github.com/repos/Fabstract/Router/zipball/4e8b978a7e04f458cea22edb69c115cea9b5cdb0",
+                "reference": "4e8b978a7e04f458cea22edb69c115cea9b5cdb0",
                 "shasum": ""
             },
             "require": {
-                "fabstract/assert": "dev-master",
+                "fabstract/assert": "^0.1.0",
                 "php": "^7.0"
             },
             "type": "library",
@@ -355,6 +334,7 @@
                     "Fabstract\\Component\\Router\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -370,31 +350,27 @@
                 "php",
                 "router"
             ],
-            "support": {
-                "source": "https://github.com/Fabstract/Router/tree/master",
-                "issues": "https://github.com/Fabstract/Router/issues"
-            },
-            "time": "2018-03-21T10:33:48+00:00"
+            "time": "2018-03-29T14:18:55+00:00"
         },
         {
             "name": "fabstract/serializer",
-            "version": "dev-master",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/Serializer.git",
-                "reference": "eb01787062163a0b58599df41e9c4e14fe272810"
+                "reference": "36772742b1787110fc391a48266bb5c0a3073cab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fabstract/Serializer/zipball/eb01787062163a0b58599df41e9c4e14fe272810",
-                "reference": "eb01787062163a0b58599df41e9c4e14fe272810",
+                "url": "https://api.github.com/repos/Fabstract/Serializer/zipball/36772742b1787110fc391a48266bb5c0a3073cab",
+                "reference": "36772742b1787110fc391a48266bb5c0a3073cab",
                 "shasum": ""
             },
             "require": {
-                "fabstract/assert": "dev-master",
-                "fabstract/event": "dev-master",
-                "fabstract/lazy": "dev-master",
-                "fabstract/linq": "dev-master",
+                "fabstract/assert": "^0.1.0",
+                "fabstract/event": "^0.2.0",
+                "fabstract/lazy": "^0.2.0",
+                "fabstract/linq": "^0.1.0",
                 "php": "^7.0"
             },
             "type": "library",
@@ -403,6 +379,7 @@
                     "Fabstract\\Component\\Serializer\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -418,28 +395,24 @@
                 "php",
                 "serialize"
             ],
-            "support": {
-                "source": "https://github.com/Fabstract/Serializer/tree/master",
-                "issues": "https://github.com/Fabstract/Serializer/issues"
-            },
-            "time": "2018-03-21T10:30:59+00:00"
+            "time": "2018-03-29T14:34:08+00:00"
         },
         {
             "name": "fabstract/validator",
-            "version": "dev-master",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/Validator.git",
-                "reference": "f11687ada296c7b59583695d9cad519c417e9d46"
+                "reference": "62d8934532943f7f10bc95c4e654327acc224cbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fabstract/Validator/zipball/f11687ada296c7b59583695d9cad519c417e9d46",
-                "reference": "f11687ada296c7b59583695d9cad519c417e9d46",
+                "url": "https://api.github.com/repos/Fabstract/Validator/zipball/62d8934532943f7f10bc95c4e654327acc224cbe",
+                "reference": "62d8934532943f7f10bc95c4e654327acc224cbe",
                 "shasum": ""
             },
             "require": {
-                "fabstract/assert": "dev-master",
+                "fabstract/assert": "^0.1.0",
                 "php": "^7.0"
             },
             "type": "library",
@@ -448,6 +421,7 @@
                     "Fabstract\\Component\\Validator\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -463,11 +437,7 @@
                 "php",
                 "validator"
             ],
-            "support": {
-                "source": "https://github.com/Fabstract/Validator/tree/master",
-                "issues": "https://github.com/Fabstract/Validator/issues"
-            },
-            "time": "2018-03-22T10:39:40+00:00"
+            "time": "2018-03-29T14:36:34+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -745,16 +715,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "fabstract/http-application": 20,
-        "fabstract/assert": 20,
-        "fabstract/event": 20,
-        "fabstract/serializer": 20,
-        "fabstract/router": 20,
-        "fabstract/di": 20,
-        "fabstract/lazy": 20,
-        "fabstract/validator": 20,
-        "fabstract/datetime-handler": 20,
-        "fabstract/linq": 20,
         "symfony/http-foundation": 10
     },
     "prefer-stable": false,
