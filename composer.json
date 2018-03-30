@@ -21,16 +21,8 @@
   },
   "require": {
     "php": "^7.0",
-    "fabstract/http-application": "dev-master",
-    "fabstract/assert": "dev-master",
-    "fabstract/event": "dev-master",
-    "fabstract/serializer": "dev-master",
-    "fabstract/router": "dev-master",
-    "fabstract/di": "dev-master",
-    "fabstract/lazy": "dev-master",
-    "fabstract/validator": "dev-master",
-    "fabstract/datetime-handler": "dev-master",
-    "fabstract/linq": "dev-master",
+    "fabstract/http-application": "^0.2.0",
+    "fabstract/validator": "^0.2.0",
     "symfony/http-foundation": "3.4.6-BETA5"
   },
   "repositories": [
