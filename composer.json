@@ -36,46 +36,6 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "git@github.com:Fabstract/HTTP-Application.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:Fabstract/Assert.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:Fabstract/Serializer.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:Fabstract/Event.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:Fabstract/Router.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:Fabstract/Dependency-Injection.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:Fabstract/Lazy.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:Fabstract/Validator.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:Fabstract/LINQ.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:Fabstract/DateTimeHandler.git"
-    },
-    {
-      "type": "vcs",
       "url": "git@github.com:Fabstract/http-foundation.git"
     }
   ]
