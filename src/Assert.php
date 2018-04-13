@@ -6,10 +6,16 @@ use Fabstract\Component\REST\Exception\AssertionException;
 
 class Assert extends \Fabstract\Component\Assert\Assert
 {
+    /**
+     * @param string $name
+     * @param string $expected
+     * @param string $given
+     * @return AssertionException
+     */
     protected static function generateException($name, $expected, $given)
     {
         $exception = parent::generateException($name, $expected, $given);
-        throw new AssertionException(
+        return new AssertionException(
             $exception->getMessage(),
             $exception->getCode(),
             $exception
