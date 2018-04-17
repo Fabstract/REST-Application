@@ -15,7 +15,7 @@ use Fabstract\Component\Http\ExceptionLoggerService;
  * @property \Fabstract\Component\Serializer\Normalizer\Normalizer normalizer
  * @property ExceptionLoggerService exception_logger
  */
-interface ServiceAware
+interface ServiceAware extends \Fabstract\Component\Http\ServiceAware
 {
 
 }

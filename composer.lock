@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3bb3b4dbd6607b2432b8da03138a9585",
+    "content-hash": "ef729a2c7a5ea6d0278214eebf3eafc9",
     "packages": [
         {
             "name": "fabstract/assert",
@@ -92,16 +92,16 @@
         },
         {
             "name": "fabstract/di",
-            "version": "v0.4.0",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/Dependency-Injection.git",
-                "reference": "27f0cc0d27d14f948354737c8c51d6010345fb7b"
+                "reference": "7c77bdc4787dccc0f1a8dc6240316541f08ca0a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fabstract/Dependency-Injection/zipball/27f0cc0d27d14f948354737c8c51d6010345fb7b",
-                "reference": "27f0cc0d27d14f948354737c8c51d6010345fb7b",
+                "url": "https://api.github.com/repos/Fabstract/Dependency-Injection/zipball/7c77bdc4787dccc0f1a8dc6240316541f08ca0a5",
+                "reference": "7c77bdc4787dccc0f1a8dc6240316541f08ca0a5",
                 "shasum": ""
             },
             "require": {
@@ -134,7 +134,7 @@
                 "injection",
                 "php"
             ],
-            "time": "2018-04-17T08:44:14+00:00"
+            "time": "2018-04-17T09:20:19+00:00"
         },
         {
             "name": "fabstract/event",
@@ -180,16 +180,16 @@
         },
         {
             "name": "fabstract/http-application",
-            "version": "v0.5.0",
+            "version": "v0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/HTTP-Application.git",
-                "reference": "2cdb4d64f9522fbd97cde52fa80bd406fbafab86"
+                "reference": "b8118f2521dea78822ae7b1d328370568ed46181"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fabstract/HTTP-Application/zipball/2cdb4d64f9522fbd97cde52fa80bd406fbafab86",
-                "reference": "2cdb4d64f9522fbd97cde52fa80bd406fbafab86",
+                "url": "https://api.github.com/repos/Fabstract/HTTP-Application/zipball/b8118f2521dea78822ae7b1d328370568ed46181",
+                "reference": "b8118f2521dea78822ae7b1d328370568ed46181",
                 "shasum": ""
             },
             "require": {
@@ -228,7 +228,7 @@
                 "http application",
                 "php"
             ],
-            "time": "2018-04-17T08:49:52+00:00"
+            "time": "2018-04-17T16:13:01+00:00"
         },
         {
             "name": "fabstract/lazy",
