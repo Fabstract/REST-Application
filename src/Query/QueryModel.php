@@ -21,7 +21,6 @@ class QueryModel
      * @param SortQueryElementModel[] $sort_query_element_list
      * @param int $page
      * @param int $per_page
-     * @throws \Fabstract\Component\Assert\AssertionExceptionInterface
      */
     public function __construct($query_element_list = [], $sort_query_element_list = [], $page, $per_page)
     {

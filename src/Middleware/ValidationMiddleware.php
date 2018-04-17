@@ -10,6 +10,9 @@ use Fabstract\Component\REST\Model\ValidationErrorModel;
 
 class ValidationMiddleware extends MiddlewareBase implements ServiceAware
 {
+    /**
+     * @throws UnprocessableEntityException
+     */
     public function before()
     {
         $request_body = $this->request->getBody();

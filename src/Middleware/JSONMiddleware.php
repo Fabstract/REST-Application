@@ -13,6 +13,9 @@ use Fabstract\Component\REST\Model\ResponseModel;
 
 class JSONMiddleware extends MiddlewareBase
 {
+    /**
+     * @throws UnsupportedMediaTypeException
+     */
     public function before()
     {
         Assert::isType($this->serializer, JSONSerializer::class, 'serializer');

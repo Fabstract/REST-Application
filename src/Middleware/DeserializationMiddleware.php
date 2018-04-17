@@ -20,6 +20,9 @@ class DeserializationMiddleware extends MiddlewareBase
         $this->type = $type;
     }
 
+    /**
+     * @throws BadRequestException
+     */
     public function before()
     {
         if ($this->getContainer()->has(Services::SERIALIZER) === true) {
