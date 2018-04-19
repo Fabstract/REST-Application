@@ -22,7 +22,7 @@
   "require": {
     "php": "^7.0",
     "fabstract/http-application": "^0.5.0",
-    "fabstract/validator": "^0.2.0",
+    "fabstract/validator": "^0.3.0",
     "symfony/http-foundation": "3.4.6-BETA5"
   },
   "repositories": [
