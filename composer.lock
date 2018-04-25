@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef729a2c7a5ea6d0278214eebf3eafc9",
+    "content-hash": "329ea3a654ed8435c0bee924988972a0",
     "packages": [
         {
             "name": "fabstract/assert",
@@ -180,16 +180,16 @@
         },
         {
             "name": "fabstract/http-application",
-            "version": "v0.5.1",
+            "version": "v0.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/HTTP-Application.git",
-                "reference": "b8118f2521dea78822ae7b1d328370568ed46181"
+                "reference": "9aed400616dbeacd187a9c18df5fc9f278ea0de2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fabstract/HTTP-Application/zipball/b8118f2521dea78822ae7b1d328370568ed46181",
-                "reference": "b8118f2521dea78822ae7b1d328370568ed46181",
+                "url": "https://api.github.com/repos/Fabstract/HTTP-Application/zipball/9aed400616dbeacd187a9c18df5fc9f278ea0de2",
+                "reference": "9aed400616dbeacd187a9c18df5fc9f278ea0de2",
                 "shasum": ""
             },
             "require": {
@@ -228,7 +228,7 @@
                 "http application",
                 "php"
             ],
-            "time": "2018-04-17T16:13:01+00:00"
+            "time": "2018-04-23T08:16:23+00:00"
         },
         {
             "name": "fabstract/lazy",
@@ -399,16 +399,16 @@
         },
         {
             "name": "fabstract/validator",
-            "version": "v0.2.0",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fabstract/Validator.git",
-                "reference": "62d8934532943f7f10bc95c4e654327acc224cbe"
+                "reference": "03efcd880a799acaac2b054ce9879287d39e08eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fabstract/Validator/zipball/62d8934532943f7f10bc95c4e654327acc224cbe",
-                "reference": "62d8934532943f7f10bc95c4e654327acc224cbe",
+                "url": "https://api.github.com/repos/Fabstract/Validator/zipball/03efcd880a799acaac2b054ce9879287d39e08eb",
+                "reference": "03efcd880a799acaac2b054ce9879287d39e08eb",
                 "shasum": ""
             },
             "require": {
@@ -437,7 +437,7 @@
                 "php",
                 "validator"
             ],
-            "time": "2018-03-29T14:36:34+00:00"
+            "time": "2018-04-19T13:33:47+00:00"
         },
         {
             "name": "paragonie/random_compat",
