@@ -271,6 +271,6 @@ class QueryModelBuilder
     private function getPerPage($bag)
     {
         $query_per_page_key = $this->query_config->getQueryKeyPerPage();
-        return $bag->getInt($query_per_page_key, 1);
+        return $bag->getInt($query_per_page_key);
     }
 }
