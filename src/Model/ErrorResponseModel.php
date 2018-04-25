@@ -2,6 +2,8 @@
 
 namespace Fabstract\Component\REST\Model;
 
+use Fabstract\Component\Serializer\Normalizer\NormalizationMetadata;
+
 class ErrorResponseModel extends ResponseModel
 {
     /** @var string */
@@ -9,6 +11,10 @@ class ErrorResponseModel extends ResponseModel
     /** @var null|object */
     public $error_details = null;
 
+    /**
+     * @param NormalizationMetadata $normalization_metadata
+     * @return void
+     */
     public function configureNormalizationMetadata($normalization_metadata)
     {
         parent::configureNormalizationMetadata($normalization_metadata);
