@@ -22,7 +22,7 @@ class QueryModel
      * @param int $page
      * @param int $per_page
      */
-    public function __construct($query_element_list = [], $sort_query_element_list = [], $page, $per_page)
+    public function __construct($query_element_list = [], $sort_query_element_list = [], $page = 0, $per_page = 0)
     {
         Assert::isArrayOfType($query_element_list, QueryElementModel::class, 'query_element_list');
         Assert::isArrayOfType($sort_query_element_list, SortQueryElementModel::class, 'sort_query_element_list');
