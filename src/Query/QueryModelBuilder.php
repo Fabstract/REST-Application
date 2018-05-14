@@ -149,7 +149,7 @@ class QueryModelBuilder
             'type'
         );
 
-        $this->query_element_model_list[] = $sort_query_element;
+        $this->sort_query_element_model_list[] = $sort_query_element;
         return $this;
     }
 
