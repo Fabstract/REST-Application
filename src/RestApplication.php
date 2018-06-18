@@ -8,8 +8,8 @@ use Fabstract\Component\Http\Definition\ExceptionHandlerDefinition;
 use Fabstract\Component\Http\Definition\ServiceDefinition\SerializerDefinition;
 use Fabstract\Component\Http\Exception\StatusCodeException;
 use Fabstract\Component\Http\ExceptionHandler\LoggingGeneralExceptionHandler;
-use Fabstract\Component\Http\ExceptionLoggerService;
 use Fabstract\Component\Http\HttpApplicationBase;
+use Fabstract\Component\Http\SimpleExceptionLoggerService;
 use Fabstract\Component\REST\Constant\Services;
 use Fabstract\Component\REST\Exception\ResponseValidationException;
 use Fabstract\Component\REST\ExceptionHandler\ResponseValidationExceptionHandler;
@@ -64,7 +64,7 @@ abstract class RestApplication extends HttpApplicationBase implements ServiceAwa
                 ->setClassName(NormalizationListener::class))
             ->add((new ServiceDefinition(true))
                 ->setName(Services::EXCEPTION_LOGGER)
-                ->setClassName(ExceptionLoggerService::class));
+                ->setClassName(SimpleExceptionLoggerService::class));
 
         $this->normalizer->addListener($this->normalization_listener);
 
