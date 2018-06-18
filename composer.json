@@ -20,8 +20,8 @@
     }
   },
   "require": {
-    "php": "^7.0",
-    "fabstract/http-application": "^0.5.0",
+    "php": "^7.1",
+    "fabstract/http-application": "^0.7.0",
     "fabstract/validator": "^0.4.0",
     "symfony/http-foundation": "3.4.6-BETA5"
   },
