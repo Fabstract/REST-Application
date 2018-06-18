@@ -28,7 +28,7 @@ class ResponseValidationExceptionHandler extends ExceptionHandlerBase implements
         } catch (\Exception $exception) {
         }
 
-        $this->exception_logger->log($exception, 'internal_server_error_log.txt');
+        $this->exception_logger->logThrowable($exception);
 
         throw new InternalServerErrorException();
     }
