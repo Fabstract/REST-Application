@@ -1,7 +1,6 @@
 <?php
 
 namespace Fabstract\Component\REST;
-use Fabstract\Component\Http\ExceptionLoggerService;
 
 /**
  * Class Injectable
@@ -13,9 +12,8 @@ use Fabstract\Component\Http\ExceptionLoggerService;
  * @property \Fabstract\Component\Validator\Validator validator
  * @property \Fabstract\Component\Serializer\Encoder\JSONEncoder encoder
  * @property \Fabstract\Component\Serializer\Normalizer\Normalizer normalizer
- * @property ExceptionLoggerService exception_logger
+ * @property \Fabstract\Component\Http\ThrowableLoggerInterface exception_logger
  */
 interface ServiceAware extends \Fabstract\Component\Http\ServiceAware
 {
-
 }
