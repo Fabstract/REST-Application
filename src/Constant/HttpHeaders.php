@@ -2,12 +2,8 @@
 
 namespace Fabstract\Component\REST\Constant;
 
-class HttpHeaders
+class HttpHeaders extends \Fabstract\Component\Http\Constant\HttpHeaders
 {
-    const ACCESS_CONTROL_EXPOSE_HEADERS = 'Access-Control-Expose-Headers';
-    const ACCESS_CONTROL_ALLOW_METHODS = 'Access-Control-Allow-Methods';
-    const ACCESS_CONTROL_ALLOW_HEADERS = 'Access-Control-Allow-Headers';
-    const ACCESS_CONTROL_ALLOW_ORIGIN = 'Access-Control-Allow-Origin';
     const X_HTTP_METHOD_OVERRIDE = 'X-HTTP-METHOD-OVERRIDE';
     const X_RATELIMIT_REMAINING = 'X-RateLimit-Remaining';
     const X_RATELIMIT_LIMIT = 'X-RateLimit-Limit';
