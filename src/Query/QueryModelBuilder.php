@@ -5,7 +5,7 @@ namespace Fabstract\Component\REST\Query;
 use Fabstract\Component\Http\Request;
 use Fabstract\Component\LINQ\LINQ;
 use Fabstract\Component\REST\Assert;
-use Symfony\Component\HttpFoundation\ParameterBagInterface;
+use Symfony\Component\HttpFoundation\ParameterBag;
 
 class QueryModelBuilder
 {
@@ -163,7 +163,7 @@ class QueryModelBuilder
     }
 
     /**
-     * @param ParameterBagInterface $bag
+     * @param ParameterBag $bag
      * @return QueryModel
      */
     public function buildFromQueryParametersBag($bag)
@@ -176,7 +176,7 @@ class QueryModelBuilder
     }
 
     /**
-     * @param ParameterBagInterface $bag
+     * @param ParameterBag $bag
      * @return QueryElementModel[]
      */
     private function getQueryElementList($bag)
@@ -214,7 +214,7 @@ class QueryModelBuilder
     }
 
     /**
-     * @param ParameterBagInterface $bag
+     * @param ParameterBag $bag
      * @return SortQueryElementModel[]
      */
     private function getSortQueryElementList($bag)
@@ -255,7 +255,7 @@ class QueryModelBuilder
     }
 
     /**
-     * @param ParameterBagInterface $bag
+     * @param ParameterBag $bag
      * @return int
      */
     private function getPage($bag)
@@ -265,7 +265,7 @@ class QueryModelBuilder
     }
 
     /**
-     * @param ParameterBagInterface $bag
+     * @param ParameterBag $bag
      * @return int
      */
     private function getPerPage($bag)
