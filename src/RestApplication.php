@@ -9,6 +9,7 @@ use Fabstract\Component\Http\Definition\ServiceDefinition\SerializerDefinition;
 use Fabstract\Component\Http\Exception\StatusCodeException;
 use Fabstract\Component\Http\ExceptionHandler\LoggingGeneralExceptionHandler;
 use Fabstract\Component\Http\HttpApplicationBase;
+use Fabstract\Component\Http\Middleware\AccessControlMiddleware;
 use Fabstract\Component\Http\SimpleExceptionLoggerService;
 use Fabstract\Component\REST\Constant\Services;
 use Fabstract\Component\REST\Exception\ResponseValidationException;
@@ -28,8 +29,6 @@ abstract class RestApplication extends HttpApplicationBase implements ServiceAwa
      */
     protected function onConstruct($app_config = null)
     {
-        parent::onConstruct($app_config);
-
         $this
             ->addExceptionHandlerDefinition(
                 (new ExceptionHandlerDefinition(StatusCodeException::class))
@@ -69,6 +68,10 @@ abstract class RestApplication extends HttpApplicationBase implements ServiceAwa
                 ->setClassName(SimpleExceptionLoggerService::class));
 
         $this->normalizer->addListener($this->normalization_listener);
+
+        if ($app_config->getAccessControlSettings() !== null) {
+            $this->addMiddleware(AccessControlMiddleware::class);
+        }
 
         $this
             ->addMiddleware(SerializationMiddleware::class)
