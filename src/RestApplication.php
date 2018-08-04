@@ -28,6 +28,8 @@ abstract class RestApplication extends HttpApplicationBase implements ServiceAwa
      */
     protected function onConstruct($app_config = null)
     {
+        parent::onConstruct($app_config);
+
         $this
             ->addExceptionHandlerDefinition(
                 (new ExceptionHandlerDefinition(StatusCodeException::class))
