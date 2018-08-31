@@ -41,7 +41,7 @@ abstract class RestApplication extends HttpApplicationBase implements ServiceAwa
                     ->setClassName(LoggingGeneralExceptionHandler::class));
 
         $this->getContainer()
-            ->add((new SerializerDefinition(true))
+            ->add((new SerializerDefinition())
                 ->setClassName(JSONSerializer::class))
             ->add((new ServiceDefinition())
                 ->setShared(true)
@@ -63,8 +63,9 @@ abstract class RestApplication extends HttpApplicationBase implements ServiceAwa
                 ->setShared(true)
                 ->setName('normalization_listener')
                 ->setClassName(NormalizationListener::class))
-            ->add((new ServiceDefinition(true))
+            ->add((new ServiceDefinition())
                 ->setName(Services::EXCEPTION_LOGGER)
+                ->setShared(true)
                 ->setClassName(SimpleExceptionLoggerService::class));
 
         $this->normalizer->addListener($this->normalization_listener);
