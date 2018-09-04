@@ -70,8 +70,10 @@ abstract class RestApplication extends HttpApplicationBase implements ServiceAwa
 
         $this->normalizer->addListener($this->normalization_listener);
 
-        if ($app_config->getAccessControlSettings() !== null) {
-            $this->addMiddleware(AccessControlMiddleware::class);
+        if ($app_config !== null) {
+            if ($app_config->getAccessControlSettings() !== null) {
+                $this->addMiddleware(AccessControlMiddleware::class);
+            }
         }
 
         $this
