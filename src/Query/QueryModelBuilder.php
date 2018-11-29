@@ -184,6 +184,12 @@ class QueryModelBuilder
         return LINQ::from($this->query_element_model_list)
             ->where(function ($query_element_model) use ($bag) {
                 /** @var QueryElementModel $query_element_model */
+                if ($query_element_model->getValue() !== null) {
+                    // If value is set before, just use it without applying filter or validation functions.
+                    return true;
+                }
+
+                /** @var QueryElementModel $query_element_model */
                 $query_value = $bag->get($query_element_model->getQueryKey());
                 if ($query_value === null) {
                     return false;
