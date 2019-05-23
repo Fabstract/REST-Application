@@ -25,6 +25,9 @@ class JSONMiddleware extends MiddlewareBase
             $this->request->isMethod(HttpMethods::PATCH)
         ) {
             $content_type = $this->request->headers->get(HttpHeaders::CONTENT_TYPE);
+            if (false !== $pos = strpos($content_type, ';')) {
+                $content_type = trim(substr($content_type, 0, $pos));
+            }
             $expected = 'application/json';
             if ($content_type !== $expected) {
                 throw new UnsupportedMediaTypeException(
